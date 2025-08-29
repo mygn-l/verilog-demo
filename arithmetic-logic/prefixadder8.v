@@ -1,4 +1,4 @@
-module preadder8(input [7:0]a, [7:0]b, cin, output reg [7:0] y, reg overflow, reg zero);
+module prefixadder8(input [7:0]a, [7:0]b, cin, output [7:0] y, overflow, zero);
   wire g00, g11, g22, g33, g44, g55, g66, g77, g99;
   wire p00, p11, p22, p33, p44, p55, p66, p77;
   wire g90, g12, g34, g56;
@@ -48,7 +48,6 @@ module preadder8(input [7:0]a, [7:0]b, cin, output reg [7:0] y, reg overflow, re
   assign #1 p96 = p92 & p36;
 
   assign #1 g94 = g44 | (g92 & p34);
-
   assign #1 g91 = g11 | (g90 & p11);
   assign #1 g93 = g33 | (g92 & p33);
   assign #1 g95 = g55 | (g94 & p55);
