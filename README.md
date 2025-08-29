@@ -5,7 +5,7 @@ Install Icarus Verilog from Homebrew.
 # Running
 
 `cd` into the downloaded folder and run:
-`iverilog -o testbench testbench.v adder.v`
+`iverilog -o testbench testbench.v ./arithmetic-logic/fulladder.v`
 
 Then run `vvp testbench`.
 

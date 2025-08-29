@@ -7,6 +7,8 @@ module prefixadder8(input [7:0]a, [7:0]b, cin, output [7:0] y, overflow, zero);
   wire p92, p36;
   wire g96;
   wire p96;
+  //G[i -> j]: columns i -> j generate a carry for column j+1
+  //P[i -> j]: propagates any carry from column i -> j+1
 
   assign #1 g99 = cin;
   assign #1 g00 = a[0] & b[0];
